@@ -1,0 +1,13 @@
+:root {
+    font-size: calc(1rem + 0.25dvw);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
