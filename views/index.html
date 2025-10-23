@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrient - Chế độ ăn uống</title>
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/universal.css">
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+    <header class="border-bottom">
+        <div id="page-logo" class="py-3">
+            <a href="/" class="text-decoration-none">
+                <h1 id="page-title" class="h3 m-0">Nutrient</h1>
+            </a>
+        </div>
+    </header>
+
+    <main class="py-4">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-7">
+                    <div class="card">
+                        <div class="card-header d-flex align-items-center justify-content-between flex-wrap gap-2">
+                            <h2 class="h5 m-0">Món ăn hôm nay</h2>
+                            <div class="d-flex flex-wrap gap-2">
+                                <button id="detectMockBtn" class="btn btn-primary btn-sm">Phát hiện (mock)</button>
+                            </div>
+                        </div>
+                        <ul id="detected-list" class="list-group list-group-flush">
+                        </ul>
+                        <div class="card-footer d-flex justify-content-between align-items-center">
+                            <small id="detected-count" class="text-muted">0 món</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Summary with progress bars (mock) -->
+                <div class="col-md-5">
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h2 class="h5 m-0">Tổng dinh dưỡng</h2>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <div class="d-flex justify-content-between"><span>Calories</span><span id="sum-cal">0 kcal</span></div>
+                                <div class="progress">
+                                    <div id="bar-cal" class="progress-bar" role="progressbar" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="d-flex justify-content-between"><span>Protein</span><span id="sum-protein">0 g</span></div>
+                                <div class="progress">
+                                    <div id="bar-protein" class="progress-bar bg-info" role="progressbar" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="d-flex justify-content-between"><span>Carb</span><span id="sum-carb">0 g</span></div>
+                                <div class="progress">
+                                    <div id="bar-carb" class="progress-bar bg-warning" role="progressbar" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="d-flex justify-content-between"><span>Fat</span><span id="sum-fat">0 g</span></div>
+                                <div class="progress">
+                                    <div id="bar-fat" class="progress-bar bg-danger" role="progressbar" style="width: 0%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/index.js" defer></script>
+</body>
+</html>
