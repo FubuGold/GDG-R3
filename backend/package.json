@@ -8,10 +8,13 @@
   },
   "dependencies": {
     "@hono/node-server": "^1.19.5",
-    "hono": "^4.10.2"
+    "hono": "^4.10.2",
+    "jquery": "^3.7.1",
+    "jquery-csv": "^1.0.40"
   },
   "devDependencies": {
-    "@types/node": "^20.11.17",
+    "@types/jquery": "^3.5.33",
+    "@types/node": "^20.19.23",
     "tsx": "^4.7.1",
     "typescript": "^5.8.3"
   }
