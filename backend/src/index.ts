@@ -1,6 +1,6 @@
 import { serve } from '@hono/node-server'
 import { Hono } from 'hono'
-import { init } from './recommend.js'
+import { initRecommend, queryRecommend } from './recommend.js'
 
 const app = new Hono()
 
@@ -15,6 +15,7 @@ serve({
   fetch: app.fetch,
   port: 3000
 }, (info) => {
-  init();
+  initRecommend();
   console.log(`Server is running on http://localhost:${info.port}`)
+  
 })
