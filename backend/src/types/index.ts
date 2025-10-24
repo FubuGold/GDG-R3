@@ -47,18 +47,3 @@ export type User = {
   activity_level: "sedentary" | "light" | "moderate" | "active" | "very_active";
   goal: "lose_weight" | "maintain_weight" | "gain_weight";
 };
-
-// Macro Distribution type
-export type MacroDistribution = {
-  protein: number;
-  carb: number;
-  fat: number;
-};
-
-// User Profile type (for nutrition analysis)
-export type UserNutritionProfile = {
-  bmr: number;
-  tdee: number;
-  targetCalories: number;
-  macroDistribution: MacroDistribution;
-};
