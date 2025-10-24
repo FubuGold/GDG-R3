@@ -1,6 +1,7 @@
 import { foodModel } from "@/models/Food.model";
 import { RETURN_SIZE, SAMPLE_SIZE, THRESHOLD, TOP_SIZE } from "@config/app";
 import type { Ingredient, Nutrient, Recommend, User } from "@types";
+import mongoose from "mongoose";
 
 /**
  * 1g carb = 4 kcal
@@ -141,7 +142,7 @@ export async function queryRecommend(diffNutrient: Nutrient, foodId?: string) {
   };
 
   if (foodId) {
-    match._id = { $ne: foodId };
+    match._id = { $ne: new mongoose.Types.ObjectId(foodId) };
   }
 
   const random_selected = await foodModel.aggregate<Ingredient>([
